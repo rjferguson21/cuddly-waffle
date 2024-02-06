@@ -36,8 +36,8 @@
       "hostType": "docker",
       "description": "Encrypted creds for registry1, scoped to this Github org using: https://github.com/renovatebot/renovate/blob/main/docs/usage/configuration-options.md#encrypted",
       "encrypted": {
-        "username": "wcFMA/xDdHCJBTolAQ//b8XUVLqHj8sibfFhPA47lWD4qpQ0q+SYBdb4X/Rojfea/VvszQO5LjS2qanKRp6YSk/JNRa9qyoPdwYBy9agy4VkfvnoOVr70LeE7e863qZPltdz3ndqi8s10YA0+zu34UQlxK7220QTNSuFhVKr1LTVcPtP6lSiBplVA4haFv6UY7G/aQtEA8DdWRdGDinu5n6K+2M6oGSCnVJwfLMK1G4rKInLNKXrGnHdfvXxoOTBLqr7/KDfGNoAHtUBP2mycpAqiD6uTh3M6OEuZFvQJMJTaT4Gaq58Q6hIBAUYX0mdkfV7vae7QTbqDjNoaTjyRNomV3ZABPc69TgoQzkn1DfWBWMloHDgsC40brBOF3qmJ9TRkbuSwImu12fcS+IGqdVaYO+IzGWhpDnTf4SuloMbIB0qHecH9AJxj4N+KvQD4o+KYTHpY5KH0Rfapgnd0OIh2QKmIdKOyJuwWC3xaHkYUJIF9+AHttPzll5uRakUQEfoqcHpFbdHahuSbtCVaZzO5uCuiDL6tt6KidQ7Dljrj2/sBQsJDU19lyLlOpmr+0ku91wwVxmryVjZbgEHVtteKfH31aUvrsgz4owjY5Jga9AugiSmbhdlcbNnz/jzt81h2heZ/3zj8lEiI45jOj8Y6AxC7sHVRQu1XchGS0ZGegACa4p0MrqgjefGBjnSXwGz+C3ITykT3Eg96g8n6m7dO/aTFdJn6e/NazbdfF+dbwQsfJ3LvbKEXIfPz9w21ph29pETZ/fBKie2WwhfiCwJF4v6PZ5h+zaEPbN95TD1E0fnN8uUyU3mi1g7AWix",
-        "password": "wcFMA/xDdHCJBTolAQ/9Hg9VIUrNxf/ict7unZs4egcBL1Hsdu08cqsNRVIhDA7ZOHSdwgKGkjtFd8hhf4pjqRibVZnkPWS1Yh+Ijyfw/+RopjE7Wvrps1L7wBEcNksmKxD+pQNIoRTc9wdSCJxbQN7HiKVjWhpqo+b3nR1RACe64JrBb6G8W+YtRyrBAjoedx2O2d1RCxdQdLO4VUmd9p2+VfpbFjaDKQrDT9iKPCkQ662BoKmPucfmu62MrHEGbhJO8brO+2NIVO2dl9s/9nHWWnt5PUiKoIraajhQTxyO9lPvC6cnXAZZ8rfw9eh/zxiLxi7sDmjKuuneFg/iV1m/mBv2YblXnkXD1wFUch6SNP26yZ+AXwCBlm6Gy4eD9YLwiVnJkHiRcGztyoVzEaK5qITBi1M8nlYc+sJfDHf7w6wxdcg4h6rycnpjvLnwnnQuQRSzJzG7xzzwUTVYE9+p5ErxSV+Y0+TZTg8nkcqzsiFDHSoNq8WXiZe/JhRJIiAR8ofXwihjSMEMkdJU3P9e4zcYp7UmJnaZ0k9IiNjjz2kJzN/N/1EPs678B9W8865ynDc/ORoIsHLA0GjqipiLvDxBa8PLGZ//dQldl8sRS9snIhbmSAJnruAZzV8isRBYiw6rM5R7avn1dsurgKlCFBnq+eVPKTiyY5LgkPCuYKn8lpKTPsFgdHRsNYfScwGaV/iakFQnBwB8DB//gn+LLYuxIOT54sYVaBjXqVfQjC5iSSQ92BHXXSz9jWnQMT03rKVuXooAJPdJ/ZhRaCREk+FPrpgQOxbCIMRpj3jkhE23Mf7Me4lqtATWQxbx9g1dTZyZkBcz0OhylSH0msCfPFE"
+        "username": "wcFMA/xDdHCJBTolAQ/9FXYzgNUO6MJ9crVH8W1p5U8ecnK6yamVOBmKib+9Lu4dtldIzqJBObR8Ctvq+our0VTXbhuCU0AvghJO+Rbjij+sDK3VNL93ojD2Xcd3IHeZhz4U+K2VPIRKHGPTC2mfc9pRZ076hoRqeAPWYrtU3gtNk7ZedMX75+yEuUWax5wS0gIjHnbu/R8fLTadNPbdyRaVGYembtuF8P2hMorCrjAED07UNivnaJaNb6Dj72Bticwqs2gIStoed3S8luzUJIgOOdS9J4Dq3ybkSIWg3+GJQhLyKIhZpgbRQoMbYLQ/z7obT1xX0avXnjobb5rW445R0LXLXj4MokgGo1p5cA+AhP5JEk49w2uutzD3tPZB58edH4USOk4q/9MXNdXzvU5RxOA6ScGeh1JNa+62/N4HA8UtYEudTFOcHkt3xq6h5VKc5k7JbvkCso29wqC8AR5ctBzuLspnzxhPrjm/BcfB/FMnwJE2MbtBxa8R1Z5Hd1DEfsEV57mF7dtV0SIImV+l/4bK/1xz/G9v31u/5DrfkQR6DjAvX8w4zUZE5gHKGsZoeZEFuUc5YQuwdeWEg20Qah4v6rbDfJUzXj9vbyFLMdIomPkuWkNSDzg6oMWCmeQAeL3+ykjsVdoBoJCvHvFEpw4dlrdlnQK1VXsWSX7TTDkRuYKQUKbKIBOWOCXScgFDQwu+f0mUkmFX1MrAojYgfWyZ1hlUDGcsE4pvTWJKP1lHykRM/qPUVh/YXfayh5upYh2MXT44yqMHhyNJE/KlCTp9KXsdflm3kaCAhqEC746IbvBpPjz3DTA7nwLUhDB3K2Zi9t/kIhMQCbV+wI2FgA",
+        "password": "wcFMA/xDdHCJBTolAQ/6A4VHieAREvIZ35w9tpdLuvCysq3951xcwBD+o5A6QNYz9K5J0X4NDp2NF5FwEeEBgh3CGF7t/jXHdvvFUSo1wnTT0N+XoU4fXta1px9rkZssPWaMmqbmQ+KWXrEo7SMYK4nXBdExtIZ/j8XvjvTZ1apAh+ySW41eAKXbeQC+5I2rjDJegH6hI7kGkQDzmSAoaDX/Nw8seccozzOj9GEGxPbtF1UYJIfG0jZObf0GowXXCtCOEd5QcQQnzILIaiN0tgZgXrQKFehMTboi8rgYLtRI3LIObUjxl7O59q7ZBCkUuyt9nYF14i9PD8IltVdPsTrGpyK/yQMFrjHWkIPGFHZC9dLyjQlhTjMFBYdye9KGfoZHnKR5pXZw7JvCho/PaP3S8y4LXPJa7YHty0wEcP1eWT0b1hapHnsyDEJ22xyCz0hVFeUnXRPj3zSqBzn4+wVPZmxcCwuLNmu28JJ76SNYAf/4hTjlc2+8WasB/C8rNA+ASf+C6SsMMp677JffWXJtfJHgtPGV+gTCBITG7D8pkCVyIdoiGDv503QDiw59YdocEHkIaRw6EzSZ5XFEHz0mbnTZ7HgRYPklsQzVvetEOmctFdZgYZZ1hjVOkWIjiuSR+hDc3IT/TdXEohZxizAZAEmmsli0Q70m2EWJo1tUqxS9soQGKGQc/crIdpHSdgFfBI3gyKZP4ehv1WzYqrWlg1syDgbNllgEJIIBxv+ZI+QMJUF8SdtleMkxE6PYvc1bzpj6nTrM1oahiK8BUKS+cTpXQr1+LneL1mQ/4rSqNQO5ooBweej3Ql0cDNzjahfYc/1AwctQOdjZRpmGUs+RaMezgF8"
       }
     }
   ],
@@ -82,9 +82,9 @@
       ],
       "matchStringsStrategy": "recursive",
       "matchStrings": [
-        "(?m)charts:([\\s\\S]*?)(?=\\n\\s{4}[\\w:]+|\\n$|^\\s{2}-)",
-        "(?m)name: ([\\s\\S]+?)(?=\\n\\s{4}[\\w\\-:]+|\\n$|^\\s{2}-)",
-        "(?m)name: (?<depName>.+)([\\s\\S]*?)(?!\\s{4}localPath:)(url: (?<registryUrl>.+)([\\s\\S]*?)version: (?<currentValue>.+))"
+        "(?m)charts:(.|\\n)*?(^\\s{4}[\\w:]+|\\n$|^\\s{2}-)",
+        "(?m)name:(.|\\n)+?(^\\s{4}[\\w\\-:]+|\\n$|^\\s{2}-)",
+        "(?m)name: (?<depName>.+)(.|\\n)*?url: (?<registryUrl>.+)(.|\\n)*?version: (?<currentValue>.+)"
       ],
       "datasourceTemplate": "helm"
     },
@@ -94,9 +94,9 @@
       ],
       "matchStringsStrategy": "recursive",
       "matchStrings": [
-        "(?m)charts:([\\s\\S]*?)(?=\\n\\s{4}[\\w:]+|\\n$|^\\s{2}-)",
-        "(?m)name: ([\\s\\S]+?)(?=\\n\\s{4}[\\w\\-:]+|\\n$|^\\s{2}-)",
-        "(?m)name: (?<depName>.+)([\\s\\S]*?)(?!\\s{4}localPath:)(version: (?<currentValue>.+)([\\s\\S]*?)?(url: (?<registryUrl>.+))?)"
+        "(?m)charts:(.|\\n)*?(^\\s{4}[\\w:]+|\\n$|^\\s{2}-)",
+        "(?m)name:(.|\\n)+?(^\\s{4}[\\w\\-:]+|\\n$|^\\s{2}-)",
+        "(?m)name: (?<depName>.+)(.|\\n)*?version: (?<currentValue>.+)(.|\\n)*?url: (?<registryUrl>.+)"
       ],
       "datasourceTemplate": "helm"
     }
