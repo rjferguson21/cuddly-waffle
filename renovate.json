@@ -82,9 +82,9 @@
       ],
       "matchStringsStrategy": "recursive",
       "matchStrings": [
-        "(?m)charts:(.|\\n)*?(^\\s{4}[\\w:]+|\\n$|^\\s{2}-)",
-        "(?m)name:(.|\\n)+?(^\\s{4}[\\w\\-:]+|\\n$|^\\s{2}-)",
-        "(?m)name: (?<depName>.+)(.|\\n)*?(?!\\s{4}localPath:)(url: (?<registryUrl>.+)(.|\\n)*?)?version: (?<currentValue>.+)"
+        "(?m)charts:([\\s\\S]*?)(?=\\n\\s{4}[\\w:]+|\\n$|^\\s{2}-)",
+        "(?m)name: ([\\s\\S]+?)(?=\\n\\s{4}[\\w\\-:]+|\\n$|^\\s{2}-)",
+        "(?m)name: (?<depName>.+)([\\s\\S]*?)(?!\\s{4}localPath:)(url: (?<registryUrl>.+)([\\s\\S]*?)version: (?<currentValue>.+))"
       ],
       "datasourceTemplate": "helm"
     },
@@ -94,9 +94,9 @@
       ],
       "matchStringsStrategy": "recursive",
       "matchStrings": [
-        "(?m)charts:(.|\\n)*?(^\\s{4}[\\w:]+|\\n$|^\\s{2}-)",
-        "(?m)name:(.|\\n)+?(^\\s{4}[\\w\\-:]+|\\n$|^\\s{2}-)",
-        "(?m)name: (?<depName>.+)(.|\\n)*?(?!\\s{4}localPath:)(version: (?<currentValue>.+)(.|\\n)*?)?(url: (?<registryUrl>.+))?"
+        "(?m)charts:([\\s\\S]*?)(?=\\n\\s{4}[\\w:]+|\\n$|^\\s{2}-)",
+        "(?m)name: ([\\s\\S]+?)(?=\\n\\s{4}[\\w\\-:]+|\\n$|^\\s{2}-)",
+        "(?m)name: (?<depName>.+)([\\s\\S]*?)(?!\\s{4}localPath:)(version: (?<currentValue>.+)([\\s\\S]*?)?(url: (?<registryUrl>.+))?)"
       ],
       "datasourceTemplate": "helm"
     }
