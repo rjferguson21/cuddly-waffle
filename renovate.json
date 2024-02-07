@@ -82,7 +82,7 @@
       ],
       "matchStringsStrategy": "recursive",
       "matchStrings": [
-        "(?m)charts:(?:(?!images)[\\s\\S])*",
+        "(?m)charts:(?:(?!images)[\\s\\S])*\\n*$\\n",
         "(?m)-.+:(?:.|\\n)+?(?=\\s+-|\\Z)",
         "(?m)name: (?<depName>\\S+)\\S*|\\n*url: (?<registryUrl>\\S+)\\S*|\\n*version: (?<currentValue>\\S+)"
       ],
