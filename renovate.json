@@ -82,11 +82,11 @@
       ],
       "matchStringsStrategy": "recursive",
       "matchStrings": [
-        "(?m)charts:(?:[\\s\\S])*images",
-        "(?m)-\\s\\S+:(?:[\\s\\S]*?)-\\s\\S+",
-        "(?m)(?:(?:(?:name:\\s(?<depName>.+))|(?:url:\\s(?<registryUrl>.+))|(?:version:\\s(?<currentValue>.+)))(?:.|\\n)*?){3}"
+        "(?m)charts:(.|\\n)*?(^\\s{4}[\\w:]+|\\n$|^\\s{2}-)",
+        "(?m)name:(.|\\n)+?(^\\s{4}[\\w\\-:]+|\\n$|^\\s{2}-)",
+        "(?m)name: (?<depName>.+)(.|\\n)*?url: (?<registryUrl>.+)(.|\\n)*?version: (?<currentValue>.+)"
       ],
       "datasourceTemplate": "helm"
-    }
+    },
   ]
 }
