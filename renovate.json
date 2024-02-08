@@ -87,6 +87,6 @@
         "(?m)name: (?<depName>.+)(.|\\n)*?url: (?<registryUrl>.+)(.|\\n)*?version: (?<currentValue>.+)"
       ],
       "datasourceTemplate": "helm"
-    },
+    }
   ]
 }
