@@ -82,8 +82,9 @@
       ],
       "matchStringsStrategy": "recursive",
       "matchStrings": [
-        "(?m)charts:(?:[\\s\\S])*images:",
-        "(?m)name: (?<depName>\\S+)\\S*|\\n*url: (?<registryUrl>\\S+)\\S*|\\n*version: (?<currentValue>\\S+)"
+        "(?m)charts:(?:[\\s\\S])*images",
+        "(?m)-\\s\\S+:(?:[\\s\\S]*?)-\\s\\S+",
+        "(?m)name: (?<depName>\\S+)\\S*|\n*url: (?<registryUrl>\\S+)\\S*|\n*version: (?<currentValue>\\S+)"
       ],
       "datasourceTemplate": "helm"
     }
