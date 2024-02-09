@@ -64,7 +64,7 @@ components:
         namespace: gitlab-runner
         url: https://charts.gitlab.io
         gitPath: chart
-        version: 0.61.0
+        version: "0.61.0"
         valuesFiles:
           - values/upstream-values.yaml
     images:
