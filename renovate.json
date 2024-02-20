@@ -5,7 +5,10 @@
   "extends": [
     ":dependencyDashboard",
     ":semanticPrefixFixDepsChoreOthers",
-    "config:base"
+    "config:base",
+    "group:all",
+    "replacements:all",
+    "workarounds:all"
   ],
   "timezone": "America/New_York",
   "rebaseStalePrs": true,
@@ -17,7 +20,7 @@
   "suppressNotifications": ["prIgnoreNotification"],
   "pre-commit": {
     "enabled": true
-  },  
+  },
   "helm-values": {
     "fileMatch": ["./.+\\.yaml$"]
   },
@@ -96,16 +99,21 @@
       "datasourceTemplate": "helm"
     }
   ],
-  "packageRules": [
+    "packageRules": [
     {
-      "matchDatasources": ["helm", "docker"],
-      "groupName": "Gitlab Runner Dependencies",
-      "labels": ["gitlab-runner-deps"]
+      "matchPackageNames": ["registry1.dso.mil/ironbank/big-bang/base"],
+      "allowedVersions": "!/8.4/"
     },
     {
-      "matchManagers": ["github-actions"],
-      "groupName": "Github Actions",
-      "labels": ["github-actions", "dependencies"]
+      "matchDatasources": ["docker"],
+      "groupName": "Ironbank",
+      "registryUrls": ["https://registry1.dso.mil"],
+      "labels": ["gitlab-runner-images"]
+    },
+    {
+      "matchDatasources": ["helm"],
+      "groupName": "Ironbank",
+      "labels": ["gitlab-runner-images"]
     }
   ]
 }
