@@ -102,14 +102,14 @@
     "packageRules": [
     {
       "matchDatasources": ["docker"],
-      "groupName": "Gitlab Runner Dependencies",
+      "groupName": "Gitlab Runner Specific Dependencies",
       "registryUrls": ["https://registry1.dso.mil"],
-      "labels": ["gitlab-runner-images"]
+      "labels": ["gitlab-runner"]
     },
     {
       "matchDatasources": ["helm"],
-      "groupName": "Gitlab Runner Dependencies",
-      "labels": ["gitlab-runner-images"]
+      "groupName": "Gitlab Runner Specific Dependencies",
+      "labels": ["gitlab-runner"]
     }
   ]
 }
