@@ -20,19 +20,19 @@
   "packageRules": [
     {
       "packagePatterns": ["*"],
-      "groupName": "Other Dependencies",
-      "labels": ["all-other-deps"]
+      "groupName": "Gitlab Runner Support Dependencies",
+      "labels": ["support-deps"]
     },
     {
       "matchDatasources": ["docker"],
-      "groupName": "Gitlab Runner Specific Dependencies",
+      "groupName": "Gitlab Runner Package Dependencies",
       "registryUrls": ["https://registry1.dso.mil"],
-      "labels": ["gitlab-runner-deps"]
+      "labels": ["package-deps"]
     },
     {
       "matchDatasources": ["helm"],
-      "groupName": "Gitlab Runner Specific Dependencies",
-      "labels": ["gitlab-runner-deps"]
+      "groupName": "Gitlab Runner Package Dependencies",
+      "labels": ["package-deps"]
     }
   ]
 }
