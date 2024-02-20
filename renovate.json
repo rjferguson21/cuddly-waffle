@@ -98,15 +98,20 @@
   ],
   "packageRules": [
     {
-      "matchDatasources": ["docker"],
+      "matchDatasources": ["helm", "docker"],
       "groupName": "Gitlab Runner Dependencies",
       "registryUrls": ["https://registry1.dso.mil"],
       "labels": ["gitlab-runner-deps"]
     },
     {
-      "matchDatasources": ["helm", "github-tags"],
+      "matchDatasources": ["github-tags"],
       "groupName": "Everything Else",
       "labels": ["dependencies"]
+    },
+    {
+      "matchManagers": ["github-actions"],
+      "groupName": "Github Actions",
+      "labels": ["github-actions", "dependencies"]
     }
   ]
 }
