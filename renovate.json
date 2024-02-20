@@ -101,18 +101,14 @@
   ],
     "packageRules": [
     {
-      "matchPackageNames": ["registry1.dso.mil/ironbank/big-bang/base"],
-      "allowedVersions": "!/8.4/"
-    },
-    {
       "matchDatasources": ["docker"],
-      "groupName": "Ironbank",
+      "groupName": "Gitlab Runner Dependencies",
       "registryUrls": ["https://registry1.dso.mil"],
       "labels": ["gitlab-runner-images"]
     },
     {
       "matchDatasources": ["helm"],
-      "groupName": "Ironbank",
+      "groupName": "Gitlab Runner Dependencies",
       "labels": ["gitlab-runner-images"]
     }
   ]
