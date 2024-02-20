@@ -1,6 +1,6 @@
 {
   "extends": [
-    "github>rjferguson21/uds-renovate/renovate.json5"
+    "github>rjferguson21/uds-renovate//renovate.json5"
   ],
   "packageRules": [
     {
