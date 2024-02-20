@@ -103,7 +103,7 @@
     {
       "packagePatterns": ["*"],
       "groupName": "Other Dependencies",
-      "labels": ["all-other-deps"],
+      "labels": ["all-other-deps"]
     },
     {
       "matchDatasources": ["docker"],
