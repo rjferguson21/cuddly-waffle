@@ -105,7 +105,6 @@
     },
     {
       "matchDatasources": ["helm", "github-tags"],
-      "matchManagers": ["github-actions"],
       "groupName": "Everything Else",
       "labels": ["dependencies"]
     }
