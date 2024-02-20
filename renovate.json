@@ -100,13 +100,7 @@
     {
       "matchDatasources": ["helm", "docker"],
       "groupName": "Gitlab Runner Dependencies",
-      "registryUrls": ["https://registry1.dso.mil"],
       "labels": ["gitlab-runner-deps"]
-    },
-    {
-      "matchDatasources": ["github-tags"],
-      "groupName": "Everything Else",
-      "labels": ["dependencies"]
     },
     {
       "matchManagers": ["github-actions"],
