@@ -2,6 +2,7 @@
   "extends": [
     "github>rjferguson21/uds-renovate//renovate.json5",
     ":semanticCommits",
+    ":semanticPrefixFixDepsChoreOthers",
     "group:all",
     "replacements:all",
     "workarounds:all"
