@@ -102,6 +102,9 @@
       "groupName": "Gitlab Runner Dependencies",
       "registryUrls": ["https://registry1.dso.mil"],
       "labels": ["gitlab-runner-deps"]
+    },
+    {
+      "labels": ["dependencies"]
     }
   ]
 }
