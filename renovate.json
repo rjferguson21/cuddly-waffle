@@ -1,8 +1,6 @@
 {
   "extends": [
     "github>rjferguson21/uds-renovate//renovate.json5",
-    ":semanticPrefixFixDepsChoreOthers",
-    "config:base",
     "group:all",
     "replacements:all",
     "workarounds:all"
