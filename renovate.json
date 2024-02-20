@@ -1,23 +1,5 @@
 {
   "extends": [
     "github>rjferguson21/uds-renovate"
-  ],
-  "packageRules": [
-    {
-      "packagePatterns": ["*"],
-      "groupName": "Other Dependencies",
-      "labels": ["all-other-deps"]
-    },
-    {
-      "matchDatasources": ["docker"],
-      "groupName": "Gitlab Runner Specific Dependencies",
-      "registryUrls": ["https://registry1.dso.mil"],
-      "labels": ["gitlab-runner-deps"]
-    },
-    {
-      "matchDatasources": ["helm"],
-      "groupName": "Gitlab Runner Specific Dependencies",
-      "labels": ["gitlab-runner-deps"]
-    }
   ]
 }
