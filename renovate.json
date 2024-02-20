@@ -1,5 +1,4 @@
 {
-  "logLevel": "debug",
   "enabled": true,
   "forkProcessing": "enabled",
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
@@ -99,10 +98,10 @@
   ],
   "packageRules": [
     {
-    "matchDatasources": ["docker"],
-    "groupName": "Gitlab Runner Dependencies",
-    "registryUrls": ["https://registry1.dso.mil"],
-    "labels": ["gitlab-runner-deps"]
+      "matchDatasources": ["docker"],
+      "groupName": "Gitlab Runner Dependencies",
+      "registryUrls": ["https://registry1.dso.mil"],
+      "labels": ["gitlab-runner-deps"]
     }
   ]
 }
