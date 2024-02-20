@@ -1,6 +1,7 @@
 {
   "extends": [
     "github>rjferguson21/uds-renovate//renovate.json5",
+    ":semanticPrefixFixDepsChoreOthers",
     "group:all",
     "replacements:all",
     "workarounds:all"
@@ -21,23 +22,20 @@
       "groupName": "Gitlab Runner Support Dependencies",
       "labels": ["support-deps"],
       "commitMessageTopic": "support-deps",
-      "packagePatterns": ["*"],
-      "semanticCommitType": "chore"
+      "packagePatterns": ["*"]
     },
     {
       "groupName": "Gitlab Runner Package Dependencies",
       "labels": ["package-deps"],
       "commitMessageTopic": "package-deps",
-      "matchDatasources": ["docker"],
       "registryUrls": ["https://registry1.dso.mil"],
-      "semanticCommitType": "fix"
+      "matchDatasources": ["docker"]
     },
     {
       "groupName": "Gitlab Runner Package Dependencies",
       "labels": ["package-deps"],
       "commitMessageTopic": "package-deps",
-      "matchDatasources": ["helm"],
-      "semanticCommitType": "fix"
+      "matchDatasources": ["helm"]
     }
   ]
 }
