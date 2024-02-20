@@ -99,7 +99,12 @@
       "datasourceTemplate": "helm"
     }
   ],
-    "packageRules": [
+  "packageRules": [
+    {
+      "packagePatterns": ["*"],
+      "groupName": "Other Dependencies",
+      "labels": ["all-other-deps"],
+    },
     {
       "matchDatasources": ["docker"],
       "groupName": "Gitlab Runner Specific Dependencies",
@@ -109,7 +114,7 @@
     {
       "matchDatasources": ["helm"],
       "groupName": "Gitlab Runner Specific Dependencies",
-      "labels": ["gitlab-runner"]
+      "labels": ["gitlab-runner-deps"]
     }
   ]
 }
