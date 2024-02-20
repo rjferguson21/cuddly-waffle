@@ -104,6 +104,8 @@
       "labels": ["gitlab-runner-deps"]
     },
     {
+      "matchDatasources": ["helm", "github-tags"],
+      "groupName": "Everything Else",
       "labels": ["dependencies"]
     }
   ]
