@@ -1,47 +1,50 @@
 includes:
+  - cleanup: ./tasks/cleanup.yaml
   - create: ./tasks/create.yaml
+  - deploy: https://raw.githubusercontent.com/defenseunicorns/uds-common-tasks/v0.1.2/tasks/deploy.yaml
+  - setup: https://raw.githubusercontent.com/defenseunicorns/uds-common-tasks/v0.1.2/tasks/setup.yaml
   - test: ./tasks/test.yaml
-  - deploy:  ./tasks/deploy.yaml
-  - setup: https://raw.githubusercontent.com/defenseunicorns/uds-common-tasks/v0.1.1/tasks/setup.yaml
-  - package: https://raw.githubusercontent.com/defenseunicorns/uds-common-tasks/v0.1.1/tasks/create.yaml
 
 tasks:
   - name: default
-    description: Setup k3d cluster, deploy Gitlab, deploy Gitlab runner
+    description: Create K3D Cluster with UDS-Core + Gitlab
     actions:
-      - task: gitlab
-      - task: gitlab-runner
+      - task: create-test-bundle
+      - task: setup-cluster
+      - task: deploy-test-bundle
+
+  - name: setup-cluster
+    description: Deploy k3d cluster using uds-common-tasks
+    actions:
+      - task: setup:k3d-test-cluster
   
   - name: create-package
-    description: Create the Gitlab runner package
+    description: Create UDS Gitlab Package, No dependencies included
     actions:
-      - task: package:package
-
-  - name: gitlab
-    description: Deploy UDS Package Gitlab from Published Github Packages
+      - task: create:gitlab-package
+  
+  - name: create-test-bundle
+    description: Create UDS Gitlab bundle with dependencies
     actions:
-      - task: create:gitlab-bundle
-      - task: setup:k3d-test-cluster
-      - task: deploy:gitlab-bundle
-
-  - name: gitlab-runner
-    description: Deploy UDS Gitlab-Runner on an existing cluster with existing Gitlab
+      - task: create:gitlab-test-bundle
+  
+  - name: deploy-test-bundle
+    description: Deploy UDS Gitlab bundle with dependencies using uds-common-tasks
     actions:
-      - task: package:package
-      - task: deploy:gitlab-runner-package
+      - task: deploy:test-bundle
 
   - name: test-package
-    description: Test the health of Gitlab and Gitlab Runner deployments
+    description: Run health checks and ingress tests
     actions:
       - task: test:health-check
+      - task: test:ingress
 
-  - name: cleanup-gitlab-runner
-    description: Remove the gitlab-runner namespace
+  - name: cleanup
+    description: Destroy k3d Cluster
     actions:
-      - cmd: kubectl delete namespace gitlab-runner-sandbox --v=9 || true
-      - cmd: kubectl delete namespace gitlab-runner --v=9 || true
+      - task: cleanup:cluster
 
-  - name: cleanup-cluster
-    description: Delete the k3d cluster
+  - name: cleanup-bundle
+    description: Remove the Deployed UDS Gitlab Bundle
     actions:
-      - cmd: k3d cluster delete uds
+      - task: cleanup:bundle

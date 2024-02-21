@@ -1,73 +1,88 @@
 # yaml-language-server: $schema=https://raw.githubusercontent.com/defenseunicorns/zarf/main/zarf.schema.json
 kind: ZarfPackageConfig
 metadata:
-  name: gitlab-runner
-  description: "UDS GitLab Runner Zarf Package"
+  name: gitlab
+  description: "UDS GitLab Package"
   # x-release-please-start-version
-  version: "16.8.0-uds.0"
+  version: "16.8.1-uds.4"
   # x-release-please-end
 
+
 variables:
-  - name: JOB_RUNNER_NAMESPACE
-    default: gitlab-runner-sandbox
+  - name: DOMAIN
+    default: "uds.dev"
+  - name: BUCKET_SUFFIX
+    default: ""
+  - name: GITLAB_REDIS_ENDPOINT
+    default: "redis-master"
+  - name: GITLAB_REDIS_SCHEME
+    default: "redis"
+  - name: GITLAB_DB_NAME
+    default: "gitlabdb"
+  - name: GITLAB_DB_USERNAME
+    default: "gitlab"
+  - name: GITLAB_DB_ENDPOINT
+    default: "postgresql"
+  - name: GITLAB_PAGES_ENABLED
+    default: "false"
+  - name: GITLAB_SIGNUP_ENABLED
+    default: "true"
+  - name: DISABLE_REGISTRY_REDIRECT
+    default: "false"
+    description: "If your storage endpoint is not publicly accessible set this to true"
 
 components:
-  - name: gitlab-registration
+  - name: gitlab
     required: true
-    description: Copy runner registration token secret from Gitlab namespace into runner namespace
-    actions:
-      onDeploy:
-        before: 
-          - cmd: kubectl get secret gitlab-gitlab-runner-secret -n gitlab -o=jsonpath={.data.runner-registration-token} | base64 -d
-            setVariables:
-              - name: RUNNER_REGISTRATION_TOKEN
-          - cmd: kubectl create namespace gitlab-runner || true
-          - cmd: kubectl create secret generic gitlab-gitlab-runner-secret --namespace=gitlab-runner --from-literal=runner-registration-token="${ZARF_VAR_RUNNER_REGISTRATION_TOKEN}" --from-literal=runner-token="" --v=9 || true
-
-  - name: gitlab-runner
-    required: true
-    description: "Deploy gitlab-runner"
+    description: "Deploy gitlab with registry1 images"
+    import:
+      path: common
     only:
       flavor: registry1
+      cluster:
+        architecture: amd64
     charts:
-      - name: uds-gitlab-runner-config
-        namespace: gitlab-runner
-        version: 0.1.0
-        localPath: chart
-        valuesFiles:
-          - values/config-values.yaml
-      - name: gitlab-runner
-        namespace: gitlab-runner
-        version: 0.61.0
-        url: https://charts.gitlab.io
-        gitPath: chart
-        valuesFiles:
-          - values/registry1-values.yaml
+    - name: gitlab
+      valuesFiles:
+        - values/registry1-values.yaml
     images:
-      - "registry1.dso.mil/ironbank/gitlab/gitlab-runner/gitlab-runner:v16.7.0"
-      - "registry1.dso.mil/ironbank/gitlab/gitlab-runner/gitlab-runner-helper:v16.6.0"
-      - "registry1.dso.mil/ironbank/redhat/ubi/ubi9:9.2"
+      - "registry1.dso.mil/ironbank/gitlab/gitlab/certificates:16.8.1"
+      - "registry1.dso.mil/ironbank/gitlab/gitlab/cfssl-self-sign:1.6.1"
+      - "registry1.dso.mil/ironbank/gitlab/gitlab/gitaly:16.8.1"
+      - "registry1.dso.mil/ironbank/gitlab/gitlab/gitlab-container-registry:16.8.1"
+      - "registry1.dso.mil/ironbank/gitlab/gitlab/gitlab-pages:16.8.1"
+      - "registry1.dso.mil/ironbank/gitlab/gitlab/gitlab-shell:16.8.1"
+      - "registry1.dso.mil/ironbank/gitlab/gitlab/gitlab-sidekiq:16.8.1"
+      - "registry1.dso.mil/ironbank/gitlab/gitlab/gitlab-toolbox:16.8.1"
+      - "registry1.dso.mil/ironbank/gitlab/gitlab/gitlab-webservice:16.8.1"
+      - "registry1.dso.mil/ironbank/gitlab/gitlab/gitlab-workhorse:16.8.1"
+      - "registry1.dso.mil/ironbank/gitlab/gitlab/kubectl:16.8.1"
+      - "registry1.dso.mil/ironbank/redhat/ubi/ubi9:9.3"
+      - "registry1.dso.mil/ironbank/gitlab/gitlab/gitlab-exporter:16.8.1"
 
-  - name: gitlab-runner
+  # Note: upstream flavor is experimental
+  - name: gitlab
     required: true
-    description: "Deploy gitlab-runner"
+    description: "Deploy gitlab"
+    import:
+      path: common
     only:
       flavor: upstream
     charts:
-      - name: uds-gitlab-runner-config
-        namespace: gitlab-runner
-        version: 0.1.0
-        localPath: chart
-        valuesFiles:
-          - values/config-values.yaml
-      - name: gitlab-runner
-        namespace: gitlab-runner
-        url: https://charts.gitlab.io
-        gitPath: chart
-        version: 0.61.0
-        valuesFiles:
-          - values/upstream-values.yaml
+    - name: gitlab
+      valuesFiles:
+        - values/upstream-values.yaml
     images:
-      - "registry.gitlab.com/gitlab-org/gitlab-runner:alpine-v16.7.0"
-      - "library/alpine:latest"
-      - "registry1.dso.mil/ironbank/gitlab/gitlab-runner/gitlab-runner-helper:v16.6.0"
+      - "registry.gitlab.com/gitlab-org/build/cng/certificates:v16.8.1"
+      - "registry.gitlab.com/gitlab-org/build/cng/cfssl-self-sign:1.6.1"
+      - "registry.gitlab.com/gitlab-org/build/cng/gitaly:v16.8.1"
+      - "registry.gitlab.com/gitlab-org/build/cng/gitlab-container-registry:v16.8.1"
+      - "registry.gitlab.com/gitlab-org/build/cng/gitlab-pages:v16.8.1"
+      - "registry.gitlab.com/gitlab-org/build/cng/gitlab-shell:v16.8.1"
+      - "registry.gitlab.com/gitlab-org/build/cng/gitlab-sidekiq-ee:v16.8.1"
+      - "registry.gitlab.com/gitlab-org/build/cng/gitlab-toolbox-ee:v16.8.1"
+      - "registry.gitlab.com/gitlab-org/build/cng/gitlab-webservice-ee:v16.8.1"
+      - "registry.gitlab.com/gitlab-org/build/cng/gitlab-workhorse-ee:v16.8.1"
+      - "registry.gitlab.com/gitlab-org/build/cng/kubectl:v16.8.1"
+      - "docker.io/redhat/ubi8:8.8"
+      - "registry.gitlab.com/gitlab-org/build/cng/gitlab-exporter:v16.8.1"

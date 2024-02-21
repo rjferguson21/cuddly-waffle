@@ -1,27 +1,27 @@
-# UDS Package Gitlab Runner
+# UDS Capability Gitlab
 
-This package is pulling in the [bigbang gitlab runner chart](https://repo1.dso.mil/big-bang/product/packages/gitlab-runner)
+## How to upgrade this capability
 
+<!-- TODO: (@WSTARR) Update these instructions -->
 
-## Creating Releases
+This package is pulling in the [bigbang gitlab chart](https://repo1.dso.mil/big-bang/product/packages/gitlab)
 
-This project uses [release-please-action](https://github.com/google-github-actions/release-please-action) for versioning and releasing OCI packages.
+The [gitlab-flux-values.yaml](../gitlab-flux-values.yaml) file contains values used when creating the flux resources for this capability. This includes the version of the chart and the base values used for this capability.
 
-### How should I write my commits?
+To upgrade
+1) Point `application.ref.tag` to the updated version of the chart.
+1) Update any base values if necessary.
+1) Update the `gitlab` component in the [zarf.yaml](../zarf.yaml) file to pull in the correct images needed for the updated version of the chart.
 
-Release Please assumes you are using [Conventional Commit messages](https://www.conventionalcommits.org/).
+## How to test this package locally
 
-The most important prefixes you should have in mind are:
+Prerequisites:
+- Docker
+- latest version of UDS CLI
+- K3d
 
-- `fix:` which represents bug fixes, and correlates to a [SemVer](https://semver.org/)
-  patch.
-- `feat:` which represents a new feature, and correlates to a SemVer minor.
-- `feat!:`,  or `fix!:`, `refactor!:`, etc., which represent a breaking change
-  (indicated by the `!`) and will result in a SemVer major.
+Note: If developing on an Apple Silicon Mac, colima is an excellent option. If using colima, the following command will provision a VM that should be adequate to deploy this package:  
 
-When changes are merged to the `main` branch, the Release Please will evaluate all commits since the previous release to calculate what changes are included and will create another PR to increase the version and tag a new release (per the Release Please design [documentation](https://github.com/googleapis/release-please/blob/main/docs/design.md#lifecycle-of-a-release)). This will also automatically generate changelog entries based on these commits.
+`colima start --cpu 8 --memory 25 --disk 50 --vm-type vz  --vz-rosetta --profile uds --arch aarch64`
 
-> TIP: Merging a PR should be done via a branch **"Squash and merge"**; this means that the commit message seen on this PR merge is what Release Please will use to determine a version bump.
-
-When the auto generated Release Please PR is merged the following steps will automatically happen.
-1) A new release will be created and tagged
+ 1) From the root of the repository run `uds run`. To test a specific package flavor, specify that via the --set flag. For example: `uds run --set FLAVOR=upstream`

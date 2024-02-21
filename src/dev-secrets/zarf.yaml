@@ -4,6 +4,7 @@ metadata:
   name: dev-secrets
   version: "0.1.0"
 
+
 components:
   - name: minio-password
     required: true

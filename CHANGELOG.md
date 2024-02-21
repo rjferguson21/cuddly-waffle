@@ -1,50 +1,81 @@
 # Changelog
 
-## [16.8.0-uds.0](https://github.com/defenseunicorns/uds-package-gitlab-runner/compare/v16.6.0-uds.0...v16.8.0-uds.0) (2024-02-05)
+All notable changes to this project will be documented in this file.
+
+## [16.8.1-uds.4](https://github.com/defenseunicorns/uds-package-gitlab/compare/v16.8.1-uds.3...v16.8.1-uds.4) (2024-02-14)
 
 
 ### Bug Fixes
 
-* copy paste error ([b046832](https://github.com/defenseunicorns/uds-package-gitlab-runner/commit/b0468320f39da2bfc5eedf1af171930348152b3f))
-* registry1 values and images and renovate ([1c8c40c](https://github.com/defenseunicorns/uds-package-gitlab-runner/commit/1c8c40c42c99865a230870d4f2f0157d19f0e315))
-* update registry1 values for upstream chart differences ([e586481](https://github.com/defenseunicorns/uds-package-gitlab-runner/commit/e586481fd4b6d1e8353c63f45d647053d06e2afe))
-* update renovate ([0dc6fe3](https://github.com/defenseunicorns/uds-package-gitlab-runner/commit/0dc6fe34b9c5645c7f4c149fdc8f0237026fd2bd))
-* update renovate comments and images for new renovate.json ([a2a9244](https://github.com/defenseunicorns/uds-package-gitlab-runner/commit/a2a9244efe45bc86e1794ffdcc04fe77d8742ac3))
+* outdated uds version and missing set value resulting in broken release pipeline ([#36](https://github.com/defenseunicorns/uds-package-gitlab/issues/36)) ([1f9b550](https://github.com/defenseunicorns/uds-package-gitlab/commit/1f9b550c55484aada5b870794ba4420c3fb99035))
 
-
-### Miscellaneous
-
-* release 16.8.0-uds.0 ([#17](https://github.com/defenseunicorns/uds-package-gitlab-runner/issues/17)) ([409816f](https://github.com/defenseunicorns/uds-package-gitlab-runner/commit/409816f6c4cbf0088c2cd0232a0b29c5387c6edb))
-* standardize repo to template and update README.md ([#14](https://github.com/defenseunicorns/uds-package-gitlab-runner/issues/14)) ([cbda1cc](https://github.com/defenseunicorns/uds-package-gitlab-runner/commit/cbda1cc6bd1b020c73aac8f7fee0830f3d3fcf74))
-
-## [16.6.0-uds.0](https://github.com/defenseunicorns/uds-package-gitlab-runner/compare/v0.59.1-uds.1...v16.6.0-uds.0) (2024-02-02)
-
-
-### Miscellaneous
-
-* registration and rbac in zarf.yaml ([#10](https://github.com/defenseunicorns/uds-package-gitlab-runner/issues/10)) ([f17a0e7](https://github.com/defenseunicorns/uds-package-gitlab-runner/commit/f17a0e79bab8eb7f62f89286f49c8e891e90fab3))
-* release 16.6.0-uds.0 ([#12](https://github.com/defenseunicorns/uds-package-gitlab-runner/issues/12)) ([ca2e168](https://github.com/defenseunicorns/uds-package-gitlab-runner/commit/ca2e168421e84ca218ddaa1515d14ada883260f9))
-
-## [0.59.1-uds.1](https://github.com/defenseunicorns/uds-package-gitlab-runner/compare/v0.59.1-uds.0...v0.59.1-uds.1) (2024-02-01)
+## [16.8.1-uds.3](https://github.com/defenseunicorns/uds-package-gitlab/compare/v16.8.1-uds.2...v16.8.1-uds.3) (2024-02-14)
 
 
 ### Bug Fixes
 
-* publish task ([#6](https://github.com/defenseunicorns/uds-package-gitlab-runner/issues/6)) ([5910cc2](https://github.com/defenseunicorns/uds-package-gitlab-runner/commit/5910cc2f7608194a18af16d739cc54345b007781))
+* standardize repo to template and update README.md ([#24](https://github.com/defenseunicorns/uds-package-gitlab/issues/24)) ([9815bb5](https://github.com/defenseunicorns/uds-package-gitlab/commit/9815bb583140ad2b828e84d8766c9d483b5a24e6))
+* remove hardcoded architecture in zarf packages ([#29](https://github.com/defenseunicorns/uds-package-gitlab/issues/29)) ([2c4e869](https://github.com/defenseunicorns/uds-package-gitlab/commit/2c4e869cccffe63001621d7c77199035e6082032))
 
-## [0.59.1-uds.0](https://github.com/defenseunicorns/uds-package-gitlab-runner/compare/v0.58.1-uds.1...v0.59.1-uds.0) (2024-02-01)
-
-
-### Features
-
-* runner creation ([#1](https://github.com/defenseunicorns/uds-package-gitlab-runner/issues/1)) ([96085eb](https://github.com/defenseunicorns/uds-package-gitlab-runner/commit/96085eb515f1c33bea03eb2d4a54e4217f09e79b))
+## [16.8.1-uds.2](https://github.com/defenseunicorns/uds-package-gitlab/compare/v16.8.1-uds.1...v16.8.1-uds.2) (2024-01-30)
 
 
-### Bug Fixes
+### ci
 
-* re-add x-release-please-end ([#5](https://github.com/defenseunicorns/uds-package-gitlab-runner/issues/5)) ([37cc08e](https://github.com/defenseunicorns/uds-package-gitlab-runner/commit/37cc08e4a44f485bb0014cc09a7a3a3dff7ed12d))
+* fix ci publish ([#19](https://github.com/defenseunicorns/uds-package-gitlab/issues/19)) ([d1d08db](https://github.com/defenseunicorns/uds-package-gitlab/commit/d1d08db47236ece57d93e2f18eeb7a6dd7db420a))
+
+## [16.8.1-uds.1](https://github.com/defenseunicorns/uds-package-gitlab/compare/v16.5.1-uds.4...v16.8.1-uds.1) (2024-01-30)
 
 
 ### Miscellaneous
 
-* release 0.59.1-uds.0 ([#4](https://github.com/defenseunicorns/uds-package-gitlab-runner/issues/4)) ([c944b7d](https://github.com/defenseunicorns/uds-package-gitlab-runner/commit/c944b7de5083a4c4fe6604690c415d93ee77652f))
+* add uds package for gitlab ([#14](https://github.com/defenseunicorns/uds-package-gitlab/issues/14)) ([2d69707](https://github.com/defenseunicorns/uds-package-gitlab/commit/2d69707065cab0ad8ebbbdd14d847a3b86b94a35))
+
+## [16.5.1-uds.4](https://github.com/defenseunicorns/uds-package-gitlab/compare/v16.5.1-uds.3...v16.5.1-uds.4) (2024-01-22)
+
+
+### Bug Fixes
+
+* release using updated version strategy ([01f18e2](https://github.com/defenseunicorns/uds-package-gitlab/commit/01f18e2bbb7b2cf66452afb8a30bb3dbe6fed00e))
+
+## [16.5.1-3](https://github.com/defenseunicorns/uds-package-gitlab/compare/v16.5.1-2...v16.5.1-3) (2024-01-05)
+
+
+### Bug Fixes
+
+* uds config in task ([fe98d76](https://github.com/defenseunicorns/uds-package-gitlab/commit/fe98d76fa353680ecb91770ecf18c3a9f3540c39))
+
+
+### Miscellaneous
+
+* begin surgery ([79b8809](https://github.com/defenseunicorns/uds-package-gitlab/commit/79b8809da0df8addf9994866ae4b8d026d4bb911))
+* uds version, service cleanup ([8674532](https://github.com/defenseunicorns/uds-package-gitlab/commit/8674532f88adfac54767410de56fe1392bc6f2d0))
+
+## [16.5.1-2](https://github.com/defenseunicorns/uds-package-gitlab/compare/v16.5.1-1...v16.5.1-2) (2023-12-18)
+
+
+### Bug Fixes
+
+* login to registry1 for publishing ([7f02afa](https://github.com/defenseunicorns/uds-package-gitlab/commit/7f02afa3ba9539549e925b934df4f7886b1b1475))
+
+## [16.5.1-1](https://github.com/defenseunicorns/uds-package-gitlab/compare/v16.5.1-0...v16.5.1-1) (2023-12-18)
+
+
+### Bug Fixes
+
+* add missing release-please files ([61ab941](https://github.com/defenseunicorns/uds-package-gitlab/commit/61ab9412466aa8aa19cbbd5adebb5d0d58e846f5))
+* add missing versioning file ([50e971f](https://github.com/defenseunicorns/uds-package-gitlab/commit/50e971f3da7438f7362889858a23b18b06112d70))
+* prerelease versioning ([665b319](https://github.com/defenseunicorns/uds-package-gitlab/commit/665b319f3a3e7c0a1accfea795dfa7f795c65a7d))
+
+
+### Miscellaneous
+
+* upgrade release please to v4.0.1 ([2508890](https://github.com/defenseunicorns/uds-package-gitlab/commit/25088905c608aa241d49336ff7396de631388ea0))
+
+## [0.0.0] - 2023-08-22
+PRE RELEASE
+
+### Added
+- Initial CHANGELOG.md
+- CONTRIBUTING.md
+- CODEOWNERS

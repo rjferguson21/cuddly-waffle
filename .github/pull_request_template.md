@@ -17,4 +17,4 @@ Relates to #
 ## Checklist before merging
 
 - [ ] Test, docs, adr added or updated as needed
-- [ ] [Contributor Guide Steps](https://github.com/defenseunicorns/uds-package-gitlab-runner/blob/main/CONTRIBUTING.md#developer-workflow) followed
+- [ ] [Contributor Guide Steps](https://github.com/defenseunicorns/uds-package-gitlab/blob/main/CONTRIBUTING.md#developer-workflow) followed

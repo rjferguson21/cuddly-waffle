@@ -1,5 +1,4 @@
-build/
-zarf-sbom/**/*.tfstate
+**/*.tfstate
 **/*.tfstate.backup
 *.tar.gz
 *.tar.zst
