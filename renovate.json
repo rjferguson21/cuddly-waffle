@@ -17,5 +17,26 @@
         "password": "wcFMA/xDdHCJBTolAQ/9EujXJGbQCHn7UGQrDzjQg2eD5x/KD/cgO1ksDBPiGiu9N4GyKp7sTh8oueN2p32uzT5MockH71mTPD8DjVb0k5psYam9gyaFJX5GzgRqNvJJQbvnHJ2XnjyH48zD9ealMoGWcD1NZa3qTzN5NkZTaMWWXUJnmryFkrbTjEkAIEVEyRnNuEkhW4wyUmv9OhJiGnawPT8JacIka0Mn6GPxkwx544ChRD+gHjz1mGmr/3yOwZL8kUFQuGFy+JeQAKcEf+2/6YF0gOGzkc7LXHTwG9SQL3yIq6npxt5GAYtEz2BKPG5TZfRqeFY8ooV+dSskngnY5RliZ9YdgzQccpGA8jl5zhiGdUcOP2WbhvJkW8Ykn66ipaTyAgVjGoTnBuPDfWYNSmnbvS2aRYnqda/gGVqoDlHFPk5dvVRz3TaUag2Dlp6tg+UTVxxq54gm9+JXToW7yEELhcjhZehRpJom1pRTftBulLuBoGSw/F4hnIoQjNeILhCP1nCPnd3rpjOgOMeWy2Bsipf4Deo+cXqjpKzF2VPlrkBu522boYF00yNCXvQ9RIH/Bd3x/6fVf/ECrWcAHngK/wrEsYTblHSokfM7I/27paoepJypukwYOqB9YUzhtsoetAvMH8tpbFBJ8UyC/RX6TPPm7hpQJfucVXBfeeq6ZGs0TXDYcYJPR0fScwEXiBHubrbJcct57sg/WsaybperV1aemzEjPFgl6Jy60S2z+xSlseFVmUskaq+cFoeU6APu1zLQbj1o4dRRRfaa56IGP5cUwZ/bzsrT1dP3kYBfoSJgdoWTJNg9LX2QQ9yi+PLZqZg/OXbVshn4RDoX18I"
       }
     }
+  ],
+  "packageRules": [
+    {
+      "groupName": "Gitlab Support Dependencies",
+      "labels": ["support-deps"],
+      "commitMessageTopic": "support-deps",
+      "packagePatterns": ["*"]
+    },
+    {
+      "groupName": "Gitlab Package Dependencies",
+      "labels": ["package-deps"],
+      "commitMessageTopic": "package-deps",
+      "registryUrls": ["https://registry1.dso.mil"],
+      "matchDatasources": ["docker"]
+    },
+    {
+      "groupName": "Gitlab Package Dependencies",
+      "labels": ["package-deps"],
+      "commitMessageTopic": "package-deps",
+      "matchDatasources": ["helm"]
+    }
   ]
 }
