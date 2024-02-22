@@ -1,7 +1,6 @@
 {
   "extends": [
     "github>rjferguson21/uds-renovate//renovate.json5",
-    ":semanticCommits",
     "group:all",
     "replacements:all",
     "workarounds:all"
