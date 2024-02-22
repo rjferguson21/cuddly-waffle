@@ -2,6 +2,39 @@
 
 All notable changes to this project will be documented in this file.
 
+## [16.8.0-uds.0](https://github.com/rjferguson21/cuddly-waffle/compare/v16.8.1-uds.4...v16.8.0-uds.0) (2024-02-22)
+
+
+### Features
+
+* runner creation ([#1](https://github.com/rjferguson21/cuddly-waffle/issues/1)) ([96085eb](https://github.com/rjferguson21/cuddly-waffle/commit/96085eb515f1c33bea03eb2d4a54e4217f09e79b))
+
+
+### Bug Fixes
+
+* copy paste error ([b046832](https://github.com/rjferguson21/cuddly-waffle/commit/b0468320f39da2bfc5eedf1af171930348152b3f))
+* publish task ([#6](https://github.com/rjferguson21/cuddly-waffle/issues/6)) ([5910cc2](https://github.com/rjferguson21/cuddly-waffle/commit/5910cc2f7608194a18af16d739cc54345b007781))
+* re-add x-release-please-end ([#5](https://github.com/rjferguson21/cuddly-waffle/issues/5)) ([37cc08e](https://github.com/rjferguson21/cuddly-waffle/commit/37cc08e4a44f485bb0014cc09a7a3a3dff7ed12d))
+* registry1 values and images and renovate ([1c8c40c](https://github.com/rjferguson21/cuddly-waffle/commit/1c8c40c42c99865a230870d4f2f0157d19f0e315))
+* update registry1 values for upstream chart differences ([e586481](https://github.com/rjferguson21/cuddly-waffle/commit/e586481fd4b6d1e8353c63f45d647053d06e2afe))
+* update renovate ([0dc6fe3](https://github.com/rjferguson21/cuddly-waffle/commit/0dc6fe34b9c5645c7f4c149fdc8f0237026fd2bd))
+* update renovate comments and images for new renovate.json ([a2a9244](https://github.com/rjferguson21/cuddly-waffle/commit/a2a9244efe45bc86e1794ffdcc04fe77d8742ac3))
+
+
+### Miscellaneous
+
+* **deps:** update support-deps to v4.0.2 ([8ad3966](https://github.com/rjferguson21/cuddly-waffle/commit/8ad3966eab195df43609df5144f40740d85331c8))
+* **main:** release 0.59.1-uds.0 ([#3](https://github.com/rjferguson21/cuddly-waffle/issues/3)) ([c912f11](https://github.com/rjferguson21/cuddly-waffle/commit/c912f114f6aef26fa103970418474cc5ae0bd9df))
+* **main:** release 0.59.1-uds.1 ([#7](https://github.com/rjferguson21/cuddly-waffle/issues/7)) ([71e0953](https://github.com/rjferguson21/cuddly-waffle/commit/71e0953b2d08e4cfb47a2716461c20bea4dcb8cb))
+* **main:** release 16.6.0-uds.0 ([#13](https://github.com/rjferguson21/cuddly-waffle/issues/13)) ([f7679c9](https://github.com/rjferguson21/cuddly-waffle/commit/f7679c9b14ca3c29765bcf88eac46004aabc0050))
+* **main:** release 16.8.0-uds.0 ([#18](https://github.com/rjferguson21/cuddly-waffle/issues/18)) ([01bf1c5](https://github.com/rjferguson21/cuddly-waffle/commit/01bf1c582945b295caf4fa9357542ec62f5e093a))
+* registration and rbac in zarf.yaml ([#10](https://github.com/rjferguson21/cuddly-waffle/issues/10)) ([f17a0e7](https://github.com/rjferguson21/cuddly-waffle/commit/f17a0e79bab8eb7f62f89286f49c8e891e90fab3))
+* release 0.59.1-uds.0 ([#4](https://github.com/rjferguson21/cuddly-waffle/issues/4)) ([c944b7d](https://github.com/rjferguson21/cuddly-waffle/commit/c944b7de5083a4c4fe6604690c415d93ee77652f))
+* release 16.6.0-uds.0 ([#12](https://github.com/rjferguson21/cuddly-waffle/issues/12)) ([ca2e168](https://github.com/rjferguson21/cuddly-waffle/commit/ca2e168421e84ca218ddaa1515d14ada883260f9))
+* release 16.8.0-uds.0 ([#17](https://github.com/rjferguson21/cuddly-waffle/issues/17)) ([409816f](https://github.com/rjferguson21/cuddly-waffle/commit/409816f6c4cbf0088c2cd0232a0b29c5387c6edb))
+* standardize repo to template and update README.md ([#14](https://github.com/rjferguson21/cuddly-waffle/issues/14)) ([cbda1cc](https://github.com/rjferguson21/cuddly-waffle/commit/cbda1cc6bd1b020c73aac8f7fee0830f3d3fcf74))
+* update zarf.yaml ([47e5fb1](https://github.com/rjferguson21/cuddly-waffle/commit/47e5fb1cc7e95fb01e3c10533faa37a800269b7e))
+
 ## [16.8.1-uds.4](https://github.com/defenseunicorns/uds-package-gitlab/compare/v16.8.1-uds.3...v16.8.1-uds.4) (2024-02-14)
 
 
